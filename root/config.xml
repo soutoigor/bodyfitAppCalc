@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.igor.bodyfit"
+    versionCode = "1"
+    version     = "1.0.0" >
+
+<!-- versionCode is optional and Android only -->
+	
+	
+
+	<icon src="img/icon.png" />
+  <name>BodyFit</name>
+
+  <description>
+      A calculator for your body.
+  </description>
+
+  <author href="https://www.linkedin.com/in/igor-souto/" email="igor_souto@outlook.com">
+Igor Souto  </author>
+
+</widget>
