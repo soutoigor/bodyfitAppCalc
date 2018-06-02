@@ -1,3 +1,8 @@
+p{
+    font-family:sans-serif;
+    font-size:16px;
+    font-weight: 400;
+}
 body{
     background-color:#797d7e;
 
@@ -7,6 +12,7 @@ p,a,a:hover{
     font-family: sans-serif;
     font-size: 15px;
     color: #222;
+    
 }
 
 
@@ -123,4 +129,46 @@ text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.8);
 }
 
 
+.nav-como-medir-imc,.nav-como-medir-bf{
+    display: flex;
+    flex-wrap: nowrap;
+   align-items: center;
+    justify-content: center;
+   
+    
+}
 
+.nav-como-medir-bf > li{
+    flex-basis: 0;
+   flex-shrink: 1;
+        flex-grow: 1;
+    width: 28%;
+    font-size:14px;
+       text-align: center;
+
+}
+.nav-como-medir-imc > li{
+    width: 50%;
+   text-align: center;
+}
+
+.tab-pane > h4{
+    font-weight: 600;
+    font-size: 24px;
+    text-align: center;
+}
+
+.tab-pane > p{
+    font-weight: 500;
+    font-size: 18px;
+  
+}
+
+.tab-pane > img{
+    width: 100%;
+    border-radius: 10px;
+}
+.modal-title{
+    font-size: 22px;
+    font-weight: 600;
+}
