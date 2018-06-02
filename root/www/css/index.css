@@ -64,23 +64,14 @@ text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.8);
 }
 
 .sub-title{
-    color: dimgrey;
-    /*font-family: Helvetica;*/
-	font-size: 5px;
-	font-weight: bold;
+    color: #696969;
+	font-size: 16px !important;
+	font-weight: 500 !important;
     margin-top: -15px;
 }
 
 .principal-title{
     color: antiquewhite;
-}
-
-.como-medir{
-    font-size: 15px !important;
-    font-weight: 100px;
-     color: dimgrey;
-    text-decoration: underline;
-    margin-top: -25px;
 }
 
 .sub-title-modal{
@@ -171,4 +162,39 @@ text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.8);
 .modal-title{
     font-size: 22px;
     font-weight: 600;
+}
+
+.buttons-forms{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.btn-calcular, .btn-calcular:hover, .btn-calcular:active{
+  color: #ffffff;
+    font-size: 20px;
+  background-color: #4f4f4f;
+  border-color: #424242;
+    width: 80%;
+    justify-content: center;
+    flex:1;
+}
+
+.como-medir{
+    font-size: 21px !important;
+    text-decoration: none;
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: #000;
+    font-weight: 100px;
+    color: #696969;
+    font-weight: 600;
+    flex:1;
+    position: relative;
+    top: 20px;
+}
+
+.como-medir:hover, .como-medir:visited, .como-medir:active{
+    text-decoration: none;
+    color: #4f4f4f;
 }

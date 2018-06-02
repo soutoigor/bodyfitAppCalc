@@ -56,7 +56,7 @@
 
                     <div class="jumbotron frm" >
                         <p class="title-box" style='font-weight: bold;'>IMC</p><br>
-                        <p style='font-size: 15px;' class="sub-title">Calcule seu IMC informando abaixo:</p>
+                        <p class="sub-title">Calcule seu IMC informando abaixo:</p>
                         <br>
                        
                        
@@ -76,12 +76,10 @@
                                                 
                             <br>
                              <div class="row">                                 
-                            <div class="col-xs-offset-2 col-sm-offset-6 col-sm-6 col-md-offset-5 col-lg-offset-5">
-                                <button type="button" name="calcular" id="calcular" class="btn btn-info"  onclick="imc();">Calcular</button>
+                          <div class="buttons-forms">
+                              <button type="button" name="calcular" id="calcular" class="btn btn-calcular"  onclick="imc();">Calcular</button>
                                
-                            </div>
-                            <div class="col-xs-offset-6 col-xs-6 col-sm-offset-6 col-sm-6 col-md-offset-9 col-lg-offset-9">
-                                <a href="#" onclick="$('#modal02').modal();"><p class="como-medir">Como Medir</p></a>
+                                <a class="como-medir" href="#" onclick="$('#modal02').modal();">Como Medir</a>
                             </div>
                             </div>
                         
@@ -139,12 +137,12 @@
                                             
                                                 <div class="tab-pane active" id="mede-altura">
                                                     <h4>Altura</h4>
-                                                    <p>Use uma fita métrica, uma régua improvisada ou outro objeto para medir sua altura em centímetros, coloque o resultado no campo "altura".</p>
+                                                    <p>Fique em pé com os pés juntos e olhando para frente, com uma fita métrica ou régua, meça sua altura em centimetros, e coloque o resultado no campo "altura".</p>
                                                     <img  src="img/altura.jpg" alt="Criança encostada na parede e mãe medindo altura dela." />
                                                 </div>
                                                 <div class="tab-pane" id="mede-peso">
                                                     <h4>Peso</h4>
-                                                    <p>Use uma balança para se pesar e coloque seu peso em kg no campo solicitado.</p>
+                                                    <p>Use uma balança para se pesar e coloque seu peso em kg no campo solicitado. É importante que seja feito logo ao acordar, ainda em jejum e após usar o banheiro.</p>
                                                     <img src="img/peso.jpg" alt="Mulher em cima de uma balança." />
                                                     
                                                 </div>

@@ -61,7 +61,7 @@
                     <div class="jumbotron frm" >
                         <p class="title-box">
                             <strong>Body Fat</strong></p><br>
-                        <p style='font-size: 15px;' class="sub-title">Calcule sua BF informando abaixo:</p>
+                        <p class="sub-title">Calcule sua BF informando abaixo:</p>
                         <br>
                         <form action="#" id="bf_frm" name="bf_frm">
                             <div class="input-group">
@@ -99,14 +99,14 @@
                             </div>
                             <br>
                              <div class="row">                                 
-                            <div class="col-xs-offset-2 col-sm-offset-6 col-sm-6 col-md-offset-5 col-lg-offset-5">
-                                <button type="button" name="calcular" id="calcular" class="btn btn-info"  onclick=" bodyFat();">Calcular</button>
-                               
-                            </div>
-                            <div class="col-xs-offset-6 col-xs-6 col-sm-offset-6 col-sm-6 col-md-offset-9 col-lg-offset-9">
-                                <a href="#" onclick="$('#modal03').modal();"><p class="como-medir">Como Medir</p></a>
-                            </div>
-                            </div>
+                          <div class="buttons-forms">
+                                <button type="button" name="calcular" id="calcular" class="btn btn-calcular"  onclick=" bodyFat();">Calcular</button>
+                              
+                                <a class="como-medir" href="#" onclick="$('#modal03').modal();">Como Medir?</a>
+                          </div>
+                          
+                         
+                            
                             
                             
                             <!-- Janela Modal BF -->
@@ -165,18 +165,18 @@
                                             
                                             <div class="tab-pane active" id="mede-altura">
                                                     <h4>Altura</h4>
-                                                    <p>Use uma fita métrica, uma régua improvisada ou outro para medir sua altura em centimetros, e coloque o resultado no campo "altura".</p>
+                                                    <p>Fique em pé com os pés juntos e olhando para frente, com uma fita métrica ou régua, meça sua altura em centimetros, e coloque o resultado no campo "altura".</p>
                                                     <img  src="img/altura.jpg" alt="Criança encostada na parede e mãe medindo altura dela." />
                                             </div>
                                                 <div class="tab-pane" id="mede-abdomen">
                                                     <h4>Abdômen</h4>
-                                                    <p>A medida da cintura deve ser feita na altura do umbigo soltando todo o ar, sem necessidade de murchar a barriga, apenas soltar todo ar</p>
+                                                    <p>A medida do abdômen deve ser feita acima do umbigo, solte todo o ar dos pulmões, mas sem murchar a barriga, apenas solte todo o ar. Faça logo ao acordar, em jejum e após usar o banheiro.</p>
                                                      <img  src="img/abdomen.jpg" alt="Mulher medindo abdômen com uma fita." />
                                                 </div>
                                                 
                                                 <div class="tab-pane" id="mede-quadril"> 
                                                     <h4>Quadril</h4>
-                                                    <p>A medida do Quadril, só é feita para as mulheres, e deve-se levar em consideração a maior medida possível.</p>
+                                                    <p>A medida do Quadril, só é feita para as mulheres, e deve-se levar em consideração a maior medida possível dos glúteos. Assim como na foto abaixo:</p>
                                                     <img  src="img/quadril.jpg" alt="Mulher medindo o quadril com uma fita." />
                                                 </div>
                                                 
