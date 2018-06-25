@@ -4,11 +4,11 @@ var $altura = document.getElementById('altura');
 var $peso = document.getElementById('peso');
 var $idade = document.getElementById('idade');
 var $sexo = document.getElementById('sexo');
-var $atividade = getRadioValor('atividade');
 var $btnCalc = document.getElementById('calcular');
 
 
 $btnCalc.addEventListener('click', function(){
+var $atividade = getRadioValor("atividade");
         mostraResultado($altura.value, $peso.value, $idade.value, $sexo.value, $atividade);
 
 
@@ -30,6 +30,7 @@ $btnCalc.addEventListener('click', function(){
 }
     
     function getRadioValor(name){
+        debugger;
   var rads = document.getElementsByName(name);
    
   for(var i = 0; i < rads.length; i++){
