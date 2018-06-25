@@ -16,7 +16,7 @@ function abrirJanelaModal(){
     $('#modal01').modal();
 };
 
-
+$(".ttp").tooltip();
 
    
     

@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BodyFit</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="css/index.css" rel="stylesheet" media="screen">
+    <!-- JavaScript -->
+    <script src="bootstrap/js/jquery-3.1.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/validator.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12">
+                <nav class="navbar navbar-inverse navbar-static-top">
+                    <div class="container-fluid col-md-offset-2 col-lg-offset-2">
+                        <div class="navbar-header col-xs-offset-1 col-sm-offset-5">
+
+                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#elementoCollapse1">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a href="index.html">
+                                <div style='color:white;' class="navbar-brand page-title">
+                                    BodyFit&nbsp;
+                                    <span class="glyphicon glyphicon-scale glyphicon-title" aria-hidden="true"></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="collapse navbar-collapse" id="elementoCollapse1">
+
+                            <ul class="nav navbar-nav navbar-right ">
+                                <li><a href="bodyfat.html">Body Fat</a></li>
+                                <li><a href="imc.html">IMC</a></li>
+                                <li class="active"><a href="tmb.html">Gasto Calórico Diário</a></li>
+                                <li><a href="#">Link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2">
+
+
+                            <div class="jumbotron frm">
+                                <p class="title-box" style='font-weight: bold;'>Gasto Calórico Diário</p><br>
+                                <p class="sub-title">Calcule informando abaixo:</p>
+                                <br>
+
+
+                                <!--INPUT DA ALTURA -->
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-resize-vertical" style='font-size: 15px;'></span></span>
+                                    <input type="number" class="form-control" placeholder="Altura  Ex: '160cm' " name="altura" id="altura">
+                                </div>
+                                <!-- -------------- -->
+                                <br>
+                                <!--INPUT DO PESO-->
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-scale" style='font-size: 15px;'></span></span>
+                                    <input type="number" class="form-control" placeholder="Peso" name="peso" id="peso">
+                                </div>
+                                <!-- ------- -->
+                                <br>
+                                <!--INPUT DA IDADE-->
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar" style='font-size: 15px;'></span></span>
+                                    <input type="number" class="form-control" placeholder="Sua idade" name="idade" id="idade">
+                                </div>
+                                <!-- ------------ -->
+                                <br>
+                                <!-- INPUT DO SEXO -->
+                                <div class="input-group">
+                                    <label for="sexo">Sexo:</label>
+                                    <select class="form-control" name="sexo" id="sexo" required>
+                                        <option value="">-Selecione-</option>
+                                        <option value="masculino">Masculino</option>
+                                        <option value="feminino">Feminino</option>
+                                    </select>
+                                </div>
+                                <!-- ----------- -->
+                                <br>
+                                <!-- INPUT ATIVIDADE DIARIA -->
+                                <div class="input-group">
+                                    <label>Nível de Atividade Diária</label>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="atividade" id="atv1" value="atv1">
+                                        <label class="form-check-label" for="atv1">Sedentário</label>
+                                        <span  class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right"  title="Sedentários nenhum exercício diário e trabalho sentado."></span>
+                                        
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="atividade" id="atv2" value="atv2">
+                                        <label class="form-check-label" for="atv2">Levemente Ativo</label>
+                                        <span  class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right"  title="Exercício leve 1 à 3 dias/semana e sentado maior parte do dia."></span>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="atividade" id="atv3" value="atv3">
+                                        <label class="form-check-label" for="atv3">Moderadamente Ativo</label>
+                                        <span  class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right"  title="Exercício moderado/forte 3 a 5 dias/semana e sentado na maior parte do dia."></span>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="atividade" id="atv4" value="atv4">
+                                        <label class="form-check-label" for="atv4">Muito Ativo</label>
+                                         <span  class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right"  title="Exercício moderado/forte 3 a 5 dias/semana e em pé na maior parte do dia."></span>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="atividade" id="atv5" value="atv5">
+                                        <label class="form-check-label" for="atv5">Extra Ativo</label>
+                                        <span  class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right"  title="Exercício intenso 5 a 7 dias/semana e em pé na maior parte do dia."></span>
+                                    </div>
+
+                                </div>
+                                <!-- ----------- -->
+                                <div class="row">
+                                    <div style="padding-top: 15px;" class="buttons-forms">
+                                        <button type="button" name="calcular" id="calcular" class="btn btn-calcular">Calcular</button>
+
+                                        <a class="como-medir" href="#" onclick="$('#modal02').modal();">Como Medir</a>
+                                    </div>
+                                </div>
+
+                                <!-- começo Janela modal TMB -->
+                                <div class="modal fade" id="modal01" role="dialog" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog modal-md">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">
+                                                <span aria-hidden="true">&times;</span>
+                                                <span class="sr-only">Fechar janela modal</span>
+                                            </button>
+
+                                                <h4 class="modal-title"><strong>Resultado TMB</strong></h4>
+
+                                            </div>
+                                            <div class="modal-body">
+                                                <!-- RESULTADO DO TMB -->
+                                                <p name="resultadodoimc" style='font-weight: bold;' id="resultadodoimc"></p>
+                                                <!-- ---------------- -->
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                                <a href="javascript:history.go();" class="btn btn-info">Novo cálculo</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- fim janela modal TMB -->
+
+                                <!-- Começo janela modal Como Medir -->
+
+                                <div class="modal fade" id="modal02" role="dialog" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog modal-md">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">
+                                                <span aria-hidden="true">&times;</span>
+                                                <span class="sr-only">Fechar janela modal</span>
+                                            </button>
+                                                <h4 class="modal-title">
+                                                    <Strong>Como Medir</Strong>
+                                                </h4>
+
+
+
+                                            </div>
+                                            <div class="modal-body">
+
+                                                <ul class="nav nav-como-medir-imc nav-tabs nav-pills pills-dark">
+
+                                                    <li class="active"><a href="#mede-altura" data-toggle="tab">Altura</a></li>
+                                                    <li class=""><a href="#mede-peso" data-toggle="tab">Peso</a></li>
+
+                                                </ul>
+
+                                                <div style='margin-top: 20px;' class="tab-content">
+
+                                                    <div class="tab-pane active" id="mede-altura">
+                                                        <h4>Altura</h4>
+                                                        <p>Fique em pé com os pés juntos e olhando para frente, com uma fita métrica ou régua, meça sua altura em centimetros, e coloque o resultado no campo "altura".</p>
+                                                        <img src="img/altura.jpg" alt="Criança encostada na parede e mãe medindo altura dela." />
+                                                    </div>
+                                                    <div class="tab-pane" id="mede-peso">
+                                                        <h4>Peso</h4>
+                                                        <p>Use uma balança para se pesar e coloque seu peso em kg no campo solicitado. É importante que seja feito logo ao acordar, ainda em jejum e após usar o banheiro.</p>
+                                                        <img src="img/peso.jpg" alt="Mulher em cima de uma balança." />
+
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Fim da janela modal Como Medir -->
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+    <script src="js/function.js"></script>
+
+</html>

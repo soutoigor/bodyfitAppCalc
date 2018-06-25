@@ -28,6 +28,20 @@ p,a,a:hover{
     
 }
 
+input[type=radio]{
+  transform:scale(2);
+}
+
+label{
+    font-size: 1.8rem;
+}
+.form-check label{
+    font-size: 1.5rem;
+    margin: 10px 0px 0px 10px;
+}
+.form-check span{
+    font-size: 2rem;
+}
 
 
 .frm{
@@ -113,10 +127,11 @@ text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.8);
   color: #FFF;
   background-color: rgba(79,79,79,0.8);
   border-color: rgba(79,79,79,0.8);
-  width: 125px;
+  width: 175px;
   height: auto;
     font-size: 20px !important;
     font-weight: 600;
+    margin-bottom: 20px;
 }
 
 
@@ -171,9 +186,12 @@ text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.8);
     flex-direction: column;
 }
 
+
+
 .btn-calcular, .btn-calcular:hover, .btn-calcular:active{
   color: #ffffff;
     font-size: 20px;
+    font-weight: 600;
   background-color: #4f4f4f;
   border-color: #424242;
     width: 80%;
@@ -198,3 +216,5 @@ text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.8);
     text-decoration: none;
     color: #4f4f4f;
 }
+
+
