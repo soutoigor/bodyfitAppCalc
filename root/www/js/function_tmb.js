@@ -8,40 +8,61 @@ var $btnCalc = document.getElementById('calcular');
 
 
 $btnCalc.addEventListener('click', function(){
-var $atividade = getRadioValor("atividade");
-        mostraResultado($altura.value, $peso.value, $idade.value, $sexo.value, $atividade);
-
+    
+        mostraResultado();
 
     });
     
     
     
-    function mostraResultado(altura, peso, idade, sexo, atividade){
-    
+    function mostraResultado(){
     $('#modal01').modal();
-    
+   
     var $resultadoTmb = document.getElementById('resultadodotmb');
     var $resultadoGastoCalorico = document.getElementById('resultadogastocalorico');
-   
-    $resultadoTmb.innerHTML = altura;
-    $resultadoGastoCalorico.innerHTML = peso + " " + idade + " " + sexo + " " + atividade;
+    var resultadoCalculoTMB = calculoTMB($altura.value, $peso.value, $idade.value, $sexo.value);
+    var resultadoGastoCalorico = calculoGastoCalorico(resultadoCalculoTMB);
     
+        $resultadoTmb.innerHTML = "Sua Taxa Metabólica Basal é: <br><strong>" + resultadoCalculoTMB + " Kcal</strong>";
+        $resultadoGastoCalorico.innerHTML = "Seu Gasto Calórico Diário é: <br><strong>" + resultadoGastoCalorico + " Kcal</strong>";
     
 }
     
-    function getRadioValor(name){
-        debugger;
-  var rads = document.getElementsByName(name);
-   
-  for(var i = 0; i < rads.length; i++){
-   if(rads[i].checked){
-    return rads[i].value;
-   }
-   
-  }
-   
-  return null;
- }
+   function calculoTMB(altura, peso, idade, sexo){
+        var resultadoTmb = 0;
+       if(sexo === 'masculino'){
+           resultadoTmb = 88.362 + (13.397 * peso) + (4.799 * altura) - (5.677 * idade);
+       }
+       else{
+           resultadoTmb = 447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 * idade);
+       }
+       
+       
+      
+       return parseInt(resultadoTmb);
+        }
     
+    
+    function calculoGastoCalorico(tmb){
+       var $atividade = getRadioValor('atividade');
+        
+        if($atividade === "atv1"){
+            return parseInt(tmb * 1.2);
+        }
+            else if($atividade === "atv2"){
+                return parseInt(tmb * 1.375);
+            }
+                else if($atividade === "atv3"){
+                    return parseInt(tmb * 1.55);
+                }
+                    else if($atividade === "atv4"){
+                        return parseInt(tmb * 1.725);
+                    }
+                        else if($atividade === "atv5"){
+                            return parseInt(tmb * 1.9);
+                        }
+        
+        
+    }
     
 })()

@@ -20,3 +20,16 @@ $(".ttp").tooltip();
 
    
     
+ function getRadioValor(name){
+       
+  var rads = document.getElementsByName(name);
+   
+  for(var i = 0; i < rads.length; i++){
+   if(rads[i].checked){
+    return rads[i].value;
+   }
+   
+  }
+   
+  return null;
+ }
