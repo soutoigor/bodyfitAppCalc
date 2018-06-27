@@ -16,7 +16,7 @@ var $btnResultado = document.getElementById('mostraResultado');
             abrirJanelaModal();
             
             
-            viewTabelaDieta();
+             criaTabelaMacros();
             
             
         }
@@ -40,10 +40,40 @@ var $btnResultado = document.getElementById('mostraResultado');
         if(objetivo === "ganhar")  return parseInt(gasto * 1.15);
     }
     
-    function viewTabelaDieta(){
-        var $divTabelaDieta = document.getElementById('divTabelaDieta');
-       
+    function criaTabelaMacros(){
+        var $TabelaDieta = document.getElementById('tabelaDieta');
         calculoMacros(calculoCalorias($gasto.value));
+        
+        //criação linha tabela
+        var $linha - document.createElement("tr");
+        var $tdCarboidrato = document.createElement("td");
+        var $tdGordura = document.createElement("td");
+        var $tdProteina = document.createElement("td");
+        var $tdCaloria = document.createElement("td");
+        
+        //Valores 
+        var tdCarboidratoValue = document.createTextNode(carboidrato);
+        var tdGorduraValue = document.createTextNode(gordura);
+        var tdProteinaValue = document.createTextNode(proteina);
+        var tdCaloriasValue = document.createTextNode(calorias);
+        
+        //Vincula valores nas tds da tabela
+        $tdCarboidrato.appendChild(tdCarboidratoValue);
+        $tdGordura.appendChild(tdGorduraValue);
+        $tdProteina.appendChild(tdProteinaValue);
+        $tdCalorias.appendChild(tdCaloriasValue);   
+        $linha.appendChild($tdCarboidrato);
+        $linha.appendChild($tdGordura);
+        $linha.appendChild($tdProteina);
+        $linha.appendChild($tdCalorias);
+        
+        //vinculando TDs na tabela
+        $TabelaDieta.appendChild($linha);
+        
+        
+        
+        
+        
         
     
     }
