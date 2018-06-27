@@ -7,15 +7,11 @@ var $sexo = document.getElementById('sexo');
 var $btnCalc = document.getElementById('calcular');
 
 
-$btnCalc.addEventListener('click', function(){
-    
-        mostraResultado();
-
-    });
-    
-    
+$btnCalc.addEventListener('click', mostraResultado());
+  
     
     function mostraResultado(){
+        return function (){
     $('#modal01').modal();
    
     var $resultadoTmb = document.getElementById('resultadodotmb');
@@ -25,8 +21,10 @@ $btnCalc.addEventListener('click', function(){
     
         $resultadoTmb.innerHTML = "Sua Taxa Metabólica Basal é: <br><strong>" + resultadoCalculoTMB + " Kcal</strong>";
         $resultadoGastoCalorico.innerHTML = "Seu Gasto Calórico Diário é: <br><strong>" + resultadoGastoCalorico + " Kcal</strong>";
-    
-}
+    window.localStorage.setItem("gasto_calorico", resultadoGastoCalorico);
+       
+        }
+            }
     
    function calculoTMB(altura, peso, idade, sexo){
         var resultadoTmb = 0;
@@ -37,8 +35,7 @@ $btnCalc.addEventListener('click', function(){
            resultadoTmb = 447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 * idade);
        }
        
-       
-      
+     
        return parseInt(resultadoTmb);
         }
     
@@ -62,7 +59,8 @@ $btnCalc.addEventListener('click', function(){
                             return parseInt(tmb * 1.9);
                         }
         
-        
-    }
+                    }
     
+
+
 })()
