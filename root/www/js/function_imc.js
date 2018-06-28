@@ -1,52 +1,59 @@
- function imc() {
+(function () {
+        'use strict';
+
+
+        var $altura = document.getElementById('alturaImc');
+        var $peso = document.getElementById('pesoImc');
+
+        var $btnCalcular = document.getElementById('calcular');
     
-    var altura = document.getElementById('altura').value;
-    var peso = document.getElementById('peso').value;
-    
-   
-    
-    
-    var calculo = ((peso / altura) / altura) * 10000;
-    
-    var arredondado = parseFloat(calculo.toFixed(2));
-     
-    abrirJanelaModal();
-     validarCampoVazio();
-   
-    
-    if(calculo<18.5){
-document.getElementById('resultadodoimc').textContent = "Você está abaixo do peso com este indice: " + arredondado;   
-};
-    if(calculo>=18.5 && calculo<24.9){
-    
-     document.getElementById('resultadodoimc').textContent = "Você está normal com este indice: " + arredondado;   
+        $btnCalcular.addEventListener('click', callResultado());
+
        
-};
 
- if(calculo>=25 && calculo<29.9) {
-document.getElementById('resultadodoimc').textContent = "Você está com sobre peso com este indice: " + arredondado;   ;
-};
- if(calculo>=30 && calculo<39.9) {
-document.getElementById('resultadodoimc').textContent = "Você está com obeisdade com este indice: " + arredondado;   
-};
- if (calculo>40){
-document.getElementById('resultadodoimc').textContent = "Você está com obesidade grave com este indice: " + arredondado;   
-};
-
-};
-
-function validarCampoVazio() {
-  
-    var campo1 = document.getElementById('altura').textContent;
-    var campo2 = document.getElementById('peso').textContent;
-    
-    if ((campo1 == "" ) || (isNaN(campo1))) {
-            document.getElementById('resultadodoimc').textContent = "Preencha corretamente os campos.";                
+        function callResultado() {
+            return function () {
+                var $imc = calculo($peso.value, $altura.value);
+                abrirJanelaModal();
+                viewResultado($imc);
+                console.log('workscall');
+            }
         }
-    if((campo2 == "" ) || (isNaN(campo2))){
-        document.getElementById('resultadodoimc').textContent = "Preencha corretamente os campos.";
-    }
-};
+
+        function viewResultado(imc) {
+            var resultado = document.getElementById('resultadodoimc');
+            
+            if (imc < 18.5) {
+            console.log('worksshow');
+                resultado.textContent = "Você está abaixo do peso com este indice: " + imc;
+            }
+
+            if (imc >= 18.5 && imc < 24.9) {
+
+                resultado.textContent = "Você está normal com este indice: " + imc;
+
+            }
+
+            if (imc >= 25 && imc < 29.9) {
+                resultado.textContent = "Você está com sobre peso com este indice: " + imc;;
+            }
+            if (imc >= 30 && imc < 39.9) {
+                resultado.textContent = "Você está com obeisdade com este indice: " + imc;
+            }
+            if (imc > 40) {
+                resultado.textContent = "Você está com obesidade grave com este indice: " + imc;
+            }
+
+        }
+    
+     function calculo(peso, altura) {
+            var result = ((peso / altura) / altura) * 10000;
+            result = parseFloat(result).toFixed(2);
+         console.log(peso, altura, result);
+            return result;
+                
+        }
+    
 
 
-
+})()

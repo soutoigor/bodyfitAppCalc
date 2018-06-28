@@ -60,16 +60,22 @@
                                 <br>
 
 
-                               <!--INPUT DO PESO-->
+                               <!--INPUT GASTO CALORICO-->
                                 <div class="input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-scale" style='font-size: 15px;'></span></span>
                                     <input type="text" class="form-control" placeholder="Insira seu Gasto Calórico Diário" name="gasto" id="gasto">
-                                     
                                 </div>
                                 <div class="row" style='margin-top: 10px;'>
                                     <button type="button" style='margin-right: 20px;' class="btn btn-sm btn-info col-xs-offset-1 col-sm-offset-1 col-xs-4 col-sm-4" id='btnSetGasto'>Já calculei</button>
                                     <a href="tmb.html"><button type="button"  class="btn btn-sm btn-info col-xs-4 col-sm-4">Calcular Gasto</button></a>
-                                </div>   
+                                </div>
+                                <br>
+                                 <!--INPUT DO PESO-->
+                                <div class="input-group">
+                                    <span class="input-group-addon"><span class="glyphicon glyphicon-scale" style='font-size: 15px;'></span></span>
+                                    <input type="text" class="form-control" placeholder="Insira seu Peso" name="peso" id="peso">
+                                </div>
+                                <!-- ------- -->
                                 <!-- ------- -->
                                 <!-- INPUT OBJETIVO -->
                                 <div style='margin-top: 20px;'>
@@ -119,29 +125,31 @@
                                                 <span class="sr-only">Fechar janela modal</span>
                                             </button>
 
-                                                <h4 class="modal-title"><strong>Resultado TMB</strong></h4>
+                                                <h4 class="modal-title"><strong>Macros da Dieta</strong></h4>
 
                                             </div>
                                             <div class="modal-body">
                                                 <!-- RESULTADO DO MACRO -->
-                                                <h3>Os macros para o seu objetivo são:</h3>
+                                                <p>Os macros para o seu objetivo são:</p>
                                                 <div class="table-responsive-sm">
                                                 <table id='tabelaDieta' class="table">
-                                                    <thead class="">
+                                                    <thead>
+                                                        
                                                         <tr>
-                                                            <th scope="col">Carboidrato</th>
+                                                            <th scope="col">Objetivo</th>
+                                                            <th scope="col">Carbo</th>
                                                             <th scope="col">Gordura</th>
                                                             <th scope="col">Proteína</th>
-                                                            <th scope="col">Calorias</th>
+                                                            <th scope="col">Kcal</th>
                                                         </tr>
-                                                        
                                                     </thead>
                                                 </table>
                                                 </div>
                                                 <!-- ---------------- -->
                                             </div>
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                                                <button type="button" id="limparTabela" class="btn btn-danger">Limpar</button>
+                                                <button type="button" class="btn btn-info" data-dismiss="modal">Fechar</button>
                                             </div>
                                         </div>
                                     </div>

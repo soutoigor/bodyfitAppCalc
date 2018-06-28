@@ -21,7 +21,8 @@ $btnCalc.addEventListener('click', mostraResultado());
     
         $resultadoTmb.innerHTML = "Sua Taxa Metabólica Basal é: <br><strong>" + resultadoCalculoTMB + " Kcal</strong>";
         $resultadoGastoCalorico.innerHTML = "Seu Gasto Calórico Diário é: <br><strong>" + resultadoGastoCalorico + " Kcal</strong>";
-    window.localStorage.setItem("gasto_calorico", resultadoGastoCalorico);
+            window.localStorage.setItem("gasto_calorico", resultadoGastoCalorico);
+            window.localStorage.setItem("peso", $peso.value);
        
         }
             }

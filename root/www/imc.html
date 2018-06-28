@@ -11,8 +11,7 @@
         <script src="bootstrap/js/jquery-3.1.1.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="bootstrap/js/validator.min.js"></script>
-        <script src="js/function_imc.js"></script>
-        <script src="js/function.js"></script>
+        
 
     </head>
 <body>
@@ -63,21 +62,21 @@
                             <div class="input-group">
                                 <!--INPUT DA ALTURA -->
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-resize-vertical" style='font-size: 15px;'></span></span>
-                                <input type="number" min="0" max="250" class="form-control" placeholder="Altura  Ex: '160cm' " name="altura" id="altura">
+                                <input type="text" min="0" max="250" class="form-control" placeholder="Altura  Ex: '160cm' " name="altura" id="alturaImc">
                                 <!-- -------------- -->
                             </div>
                             <br>
                             <div class="input-group">
                                 <!--INPUT DO PESO-->
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-scale" style='font-size: 15px;'></span></span>
-                                <input type="number" min="0" max="250" class="form-control" placeholder="Peso" name="peso" id="peso">
+                                <input type="text" min="0" max="250" class="form-control" placeholder="Peso" name="peso" id="pesoImc">
                                 <!-- ------- -->
                             </div>
                                                 
                             <br>
                              <div class="row">                                 
                           <div class="buttons-forms">
-                              <button type="button" name="calcular" id="calcular" class="btn btn-calcular"  onclick="imc();">Calcular</button>
+                              <button type="button" name="calcular" id="calcular" class="btn btn-calcular" >Calcular</button>
                                
                                 <a class="como-medir" href="#" onclick="$('#modal02').modal();">Como Medir</a>
                             </div>
@@ -167,4 +166,6 @@
     
     
 </body>
+    <script src="js/function_imc.js"></script>
+        <script src="js/function.js"></script>
 </html>
