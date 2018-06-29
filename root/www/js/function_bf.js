@@ -1,5 +1,5 @@
 function bodyFat(){
-     
+     validaForms();
     abrirJanelaModal();
     //validarCampoVazioBF();
         

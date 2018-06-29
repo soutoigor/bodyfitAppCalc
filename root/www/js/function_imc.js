@@ -1,22 +1,26 @@
 (function () {
         'use strict';
 
-
+       
+    
         var $altura = document.getElementById('alturaImc');
         var $peso = document.getElementById('pesoImc');
 
         var $btnCalcular = document.getElementById('calcular');
     
-        $btnCalcular.addEventListener('click', callResultado());
+        $btnCalcular.addEventListener('click', callResultado())
 
-       
+               
 
         function callResultado() {
             return function () {
-                var $imc = calculo($peso.value, $altura.value);
+               validaForms();
+               
                 abrirJanelaModal();
+                
+                var $imc = calculo($peso.value, $altura.value);
                 viewResultado($imc);
-                console.log('workscall');
+                
             }
         }
 
@@ -24,7 +28,6 @@
             var resultado = document.getElementById('resultadodoimc');
             
             if (imc < 18.5) {
-            console.log('worksshow');
                 resultado.textContent = "Você está abaixo do peso com este indice: " + imc;
             }
 
@@ -49,7 +52,6 @@
      function calculo(peso, altura) {
             var result = ((peso / altura) / altura) * 10000;
             result = parseFloat(result).toFixed(2);
-         console.log(peso, altura, result);
             return result;
                 
         }
