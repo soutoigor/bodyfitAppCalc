@@ -38,11 +38,11 @@ var carbo = 0;
     function calculoCalorias(gasto){
         var objetivo = getRadioValor('objetivo');
         
-        if(objetivo === "perder")  return parseInt(gasto - (gasto * 0.20));
-        
+        if(objetivo === "perder")  return parseInt(gasto - 300);
+    
         if(objetivo === "manter")  return parseInt(gasto);
         
-        if(objetivo === "ganhar")  return parseInt(gasto * 1.15);
+        if(objetivo === "ganhar")  return parseInt(gasto + 300);
     }
     
     function criaTabelaMacros(){
@@ -98,9 +98,9 @@ var carbo = 0;
     
     function calculoMacros(calorias, peso){
 
-        proteina =  peso * 2.4;
+        proteina =  peso * 2.2;
         var caloriaSoma = proteina * 4; 
-        gordura  =  peso * 1; 
+        gordura  =  peso * 0.9; 
         caloriaSoma += gordura * 9;
         carbo = (calorias - caloriaSoma) / 4 ;
         

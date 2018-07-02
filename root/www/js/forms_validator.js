@@ -1,12 +1,18 @@
 
   function validaForms(){
+      
    
+    /*  if(document.getElementById('sexo').value !== "feminino"){
+          document.getElementById('feminino').removeChild(document.getElementById('quadril'));
+      } */
+      
     var campos = document.querySelectorAll('input');
 
     for(var i = 0; i < campos.length; i++){
     
             if(!campos[i].value){
                 alert("Preencha o campo " + campos[i].getAttribute("name"));
+                
                 history.go();
                 
             }
@@ -37,13 +43,7 @@
             }
         
         
-        
-        
-        
-        
-        
-        
-           
         }
+      
     
   }
