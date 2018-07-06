@@ -45,7 +45,8 @@ label{
 
 
 .frm{
-    
+    background-color: rgba(0,0,0,0.4);
+    color: #FFF !important;
     border-width: 1px; 
     border-style: ridge;
     border-color:black; 
@@ -69,7 +70,7 @@ label{
 }
 
 .title-box{
-    color: black;
+    color: #FFF;
     font-family: Tahoma;
 	font-size: 15px;
 	font-weight: bolder;
@@ -78,7 +79,7 @@ text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.8);
 }
 
 .sub-title{
-    color: #696969;
+    color: #FFF;
 	font-size: 16px !important;
 	font-weight: 500 !important;
     margin-top: -15px;
@@ -100,16 +101,33 @@ text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.8);
 .background-index{
      
     display:block;
+   position: fixed;
     top: 0;
     left: 0;
-   position: absolute;
  /*  background-image: url(../img/1.jpg);*/
+   background-size: 100%;
     width: 100%;
-    height: 100%;
+    background-size: cover;
+overflow: hidden;
    background-position: center center;
    background-repeat: no-repeat;
+    
 
+}
 
+.background-all{
+    display:block;
+   position: absolute;
+    top: 0;
+    left: 0;
+  background-image: url(../img/bg-body.jpg);
+   background-size: 100%;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+overflow: scroll;
+   background-position: center center;
+   background-repeat: no-repeat;
 }
 
 .navbar-index{
@@ -175,6 +193,7 @@ text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.8);
     border-radius: 10px;
 }
 .modal-title{
+    color: #000;
     font-size: 22px;
     font-weight: 600;
 }
@@ -205,7 +224,7 @@ text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.8);
     -webkit-text-stroke-width: 0.2px;
     -webkit-text-stroke-color: #000;
     font-weight: 100px;
-    color: #696969;
+    color: #FFF;
     font-weight: 600;
     flex:1;
     position: relative;
@@ -214,7 +233,11 @@ text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.8);
 
 .como-medir:hover, .como-medir:visited, .como-medir:active{
     text-decoration: none;
-    color: #4f4f4f;
+    color: #FFF;
 }
 
+ .form-control{
+    background-color: rgba(0,0,0,0.0);
+    border: 0px 0px 2px 0px solid #FFF;
+}
 

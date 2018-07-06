@@ -11,16 +11,14 @@
         <script src="bootstrap/js/jquery-3.1.1.min.js"></script>
         <script src="bootstrap/js/bootstrap.min.js"></script>
         <script src="bootstrap/js/validator.min.js"></script>
-         <script src="js/forms_validator.js"></script>
-        <script src="js/function.js"></script>
-        <script src="js/function_bf.js"></script>
+        
 
         
         
         
     </head>
 <body>
-    <div class="container">
+    <div class="container background-all">
         <div class="row">
             <div class="col-xs-12 col-sm-12">
                 <nav class="navbar navbar-inverse navbar-static-top">
@@ -41,13 +39,12 @@
                         </div>
                          <div class="collapse navbar-collapse" id="elementoCollapse1">
                                 
-                                <ul class="nav navbar-nav navbar-right ">
-                                    <li class="active"><a href="bodyfat.html">Body Fat</a></li>
-                                    <li ><a href="imc.html">IMC</a></li>
-                                    <li ><a href="tmb.html">Gasto Calórico Diário</a></li>
-                                    <li ><a href="#">Link</a></li>
-                                    
-                                </ul>
+                              <ul class="nav navbar-nav navbar-right ">
+                                <li class="active"><a href="bodyfat.html">Body Fat</a></li>
+                                <li><a href="imc.html">IMC</a></li>
+                                <li ><a href="tmb.html">Gasto Calórico Diário</a></li>
+                                <li ><a href="macros.html">Monte sua Dieta</a></li>
+                            </ul>
    
                     </div>  
                     </div>
@@ -64,8 +61,7 @@
                             <strong>Body Fat</strong></p><br>
                         <p class="sub-title">Calcule sua BF informando abaixo:</p>
                         <br>
-                        <form action="#" id="bf_frm" name="bf_frm">
-                            <div class="input-group">
+                        <div class="input-group">
                                 
                                 <span class="input-group-addon"><span class="glyphicon glyphicon-resize-vertical" style='font-size: 15px;'></span></span>
                                 <input type="number" min="0" max="250" class="form-control" placeholder="Altura  Ex: '160cm' " name="altura" id="altura"  required>
@@ -101,7 +97,7 @@
                             <br>
                              <div class="row">                                 
                           <div class="buttons-forms">
-                                <button type="button" name="calcular" id="calcular" class="btn btn-calcular"  onclick=" bodyFat();">Calcular</button>
+                                <button type="button" name="calcular" id="calcular" class="btn btn-calcular" >Calcular</button>
                               
                                 <a class="como-medir" href="#" onclick="$('#modal03').modal();">Como Medir?</a>
                           </div>
@@ -201,7 +197,6 @@
                         
                         <!-- Fim da janela modal Como Medir -->
                                 
-                        </form>
                     </div>
                         </div>
                     </div>
@@ -210,6 +205,8 @@
         </div>
     </div>
     
-    
+    </div>
 </body>
+    <script src="js/function.js"></script>
+        <script src="js/function_bf.js"></script>
 </html>

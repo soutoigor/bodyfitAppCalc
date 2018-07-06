@@ -8,18 +8,17 @@
 
         var $btnCalcular = document.getElementById('calcular');
     
-        $btnCalcular.addEventListener('click', callResultado())
+        $btnCalcular.addEventListener('click', callResultado());
 
                
 
         function callResultado() {
             return function () {
-               validaForms();
                
                 abrirJanelaModal();
                 
-                var $imc = calculo($peso.value, $altura.value);
-                viewResultado($imc);
+              
+                viewResultado(calculo($peso.value, $altura.value));
                 
             }
         }
@@ -38,7 +37,7 @@
             }
 
             if (imc >= 25 && imc < 29.9) {
-                resultado.textContent = "Você está com sobre peso com este indice: " + imc;;
+                resultado.textContent = "Você está com sobre peso com este indice: " + imc;
             }
             if (imc >= 30 && imc < 39.9) {
                 resultado.textContent = "Você está com obeisdade com este indice: " + imc;

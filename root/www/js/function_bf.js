@@ -1,105 +1,118 @@
-function bodyFat(){
-     validaForms();
-    abrirJanelaModal();
-    //validarCampoVazioBF();
-        
-    var altura = parseFloat(document.getElementById('altura').value); 
-   
-    var abdomen = parseFloat(document.getElementById('abdomen').value);
-   
-    var pescoco = parseFloat(document.getElementById('pescoco').value);
-   
-    var quadril = parseFloat(document.getElementById('quadril').value);
-    
-    var sexo = String(document.getElementById('sexo').value);
-    
-    var resultado = 0;
-     
-    if(sexo == ""){
-         document.getElementById('resultadobf').textContent = "Informe seu sexo";
-    };
-    
-   if(sexo == 'masculino') {
-    
-     resultado = 86.010 * Math.log10(abdomen - pescoco) - 70.041 * Math.log10(altura) + 30.30;
-    
-        
-        resultado = parseFloat(resultado.toFixed(2));
-       
-         
-    if(resultado <= 6){
-        document.getElementById('resultadobf').innerHTML = "<b>Seu BF é: " + resultado + "% <br>Nível de competidor</b>";   
-    };
-    
-     if(resultado >= 7 && resultado <= 9){
-    
-      document.getElementById('resultadobf').innerHTML = "<b>Seu BF é: " + resultado + "% <br>Bastante em forma</b>";   
-       
-    };
+(function () {
+    'use strict';
 
-     if(resultado >= 10 && resultado <= 14) {
-      document.getElementById('resultadobf').innerHTML = "<b>Seu BF é: " + resultado + "% <br>Em forma</b>";   
-    };
-    
-     if(resultado >= 15 && resultado <= 19) {
-      document.getElementById('resultadobf').innerHTML = "<b>Seu BF é: " + resultado + "% <br>Média</b>";   
-    };
+    var $altura = document.getElementById('altura');
 
-     if (resultado >= 20 && resultado <= 25){
-      document.getElementById('resultadobf').innerHTML = "<b>Seu BF é: " + resultado + "% <br>Acima da média</b>";   
-    };   
-    
-     if (resultado >= 26){
-      document.getElementById('resultadobf').innerHTML = "<b>Seu BF é: " + resultado + "% <br>Atenção! Obesidade!</b>";   
-    };    
-       
-   };
-    
-    
-    
-    if(sexo == 'feminino'){
-        resultado =  163.205 * Math.log10(abdomen + quadril - pescoco) - 97.684 * Math.log10(altura) - 104.912;
-   
-        resultado = parseFloat(resultado.toFixed(2));
-        
-        
-            if(resultado <= 12){
-            document.getElementById('resultadobf').innerHTML = "<b>Seu BF é: " + resultado + "% <br>Nível de competidor</b>";   
+    var $abdomen = document.getElementById('abdomen');
+
+    var $pescoco = document.getElementById('pescoco');
+
+    var $sexo = document.getElementById('sexo');
+
+    document.getElementById('calcular').addEventListener('click', viewBF());
+
+
+
+    function viewBF() {
+        return function () {
+            debugger;
+            abrirJanelaModal();
+            viewResultadoBF(calculoBF($sexo.value, parseFloat($altura.value), parseFloat($abdomen.value), parseFloat($pescoco.value)), $sexo.value);
+
+        }
+    }
+
+    function calculoBF(sexo, altura, abdomen, pescoco){
+
+        var resultado = 0;
+        if (sexo === 'masculino') {
+
+            resultado = 86.010 * Math.log10(abdomen - pescoco) - 70.041 * Math.log10(altura) + 30.30;
+
+            return parseFloat(resultado.toFixed(2));
+        }
+
+        if (sexo === 'feminino') {
+            var quadril = document.getElementById('quadril');
+
+            resultado = 163.205 * Math.log10(abdomen + parseFloat(quadril.value) - pescoco) - 97.684 * Math.log10(altura) - 104.912;
+
+            return parseFloat(resultado.toFixed(2));
+
+        }
+
+    }
+
+
+
+    function viewResultadoBF(BF, sexoResult) {
+
+        if (sexoResult === 'masculino') {
+
+            if (BF > 0 && BF <= 6) {
+                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Nível de competidor";
+            };
+
+            if (BF <= 9) {
+
+                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Bastante em forma";
+
+            };
+
+            if (BF <= 14) {
+                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Em forma";
+            };
+
+            if (BF <= 19) {
+                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Média";
+            };
+
+            if (BF <= 25) {
+                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Acima da média";
+            };
+
+            if (BF > 25) {
+                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Atenção! Obesidade!";
+            };
+
+
         };
 
-         if(resultado >= 13 && resultado <= 15){
-
-          document.getElementById('resultadobf').innerHTML = "<b>Seu BF é: " + resultado + "% <br>Bastante em forma</b>";   
-
-        };
-
-         if(resultado >= 16 && resultado <= 20) {
-          document.getElementById('resultadobf').innerHTML = "<b>Seu BF é: " + resultado + "% <br>Em forma</b>";   
-        };
-
-         if(resultado >= 21 && resultado <= 25) {
-          document.getElementById('resultadobf').innerHTML = "<b>Seu BF é: " + resultado + "% <br>Média</b>";   
-        };
-
-         if (resultado >= 26 && resultado <= 30){
-          document.getElementById('resultadobf').innerHTML = "<b>Seu BF é: " + resultado + "% <br>Acima da média</b>";   
-        };   
-
-         if (resultado >= 31){
-          document.getElementById('resultadobf').innerHTML = "<b>Seu BF é: " + resultado + "% <br>Atenção! Obesidade!</b>";   
-        };    
 
 
-    };
-    
-    
-    
-    
-    
-};
+        if (sexoResult === 'feminino') {
+
+            if (BF > 0 && BF <= 12) {
+                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Nível de competidor";
+            };
 
 
+            if (BF <= 15) {
 
+                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Bastante em forma";
+
+            };
+
+            if (BF <= 20) {
+                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Em forma";
+            };
+
+            if (BF <= 25) {
+                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Média";
+            };
+
+            if (BF <= 30) {
+                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Acima da média";
+            };
+
+            if (BF > 30) {
+                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Atenção! Obesidade!";
+            };
+
+        }
+    }
+
+})()
 
 
 
