@@ -15,7 +15,6 @@
 
     function viewBF() {
         return function () {
-            debugger;
             abrirJanelaModal();
             viewResultadoBF(calculoBF($sexo.value, parseFloat($altura.value), parseFloat($abdomen.value), parseFloat($pescoco.value)), $sexo.value);
 
@@ -49,30 +48,30 @@
 
         if (sexoResult === 'masculino') {
 
-            if (BF > 0 && BF <= 6) {
-                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Nível de competidor";
+            if ((BF > 0) && (BF <= 6)) {
+                document.getElementById('resultadobf').innerHTML = "Seu BF é: <span>" + BF + "%</span><br><br>Você está em <br><b>Nível de competidor</b>";
             };
 
-            if (BF <= 9) {
+            if ((BF > 6) && (BF < 10)) {
 
-                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Bastante em forma";
+                document.getElementById('resultadobf').innerHTML = "Seu BF é: <span>" + BF + "%</span><br><br>Você está <br><b>Bastante em Forma</b>";
 
             };
 
-            if (BF <= 14) {
-                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Em forma";
+            if ((BF >= 10) && (BF < 15)) {
+                document.getElementById('resultadobf').innerHTML = "Seu BF é: <span>" + BF + "%</span><br><br>Você está <br><b>Em Forma</b>";
             };
 
-            if (BF <= 19) {
-                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Média";
+            if ((BF >= 15) && (BF < 20)) {
+                document.getElementById('resultadobf').innerHTML = "Seu BF é: <span>" + BF + "%</span><br><br>Você está <br><b>Na Média</b>";
             };
 
-            if (BF <= 25) {
-                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Acima da média";
+            if ((BF >= 20) && (BF < 26)) {
+                document.getElementById('resultadobf').innerHTML = "Seu BF é: <span>" + BF + "%</span><br><br>Você está <br><b>Acima da Média</b>";
             };
 
-            if (BF > 25) {
-                document.getElementById('resultadobf').textContent = "Seu BF é: " + BF + "% Atenção! Obesidade!";
+            if (BF >= 26) {
+                document.getElementById('resultadobf').innerHTML = "Seu BF é: <span>" + BF + "%</span><br><br>Atenção!!<br><b>Obesidade!</b>";
             };
 
 

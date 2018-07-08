@@ -101,7 +101,7 @@ var carbo = 0;
         proteina =  peso * 2.2;
         var caloriaSoma = proteina * 4; 
         gordura  =  peso * 0.9; 
-        caloriaSoma += gordura * 9;
+        caloriaSoma = caloriaSoma + (gordura * 9);
         carbo = (calorias - caloriaSoma) / 4 ;
         
         return calorias;

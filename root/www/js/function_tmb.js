@@ -12,15 +12,15 @@ $btnCalc.addEventListener('click', mostraResultado());
     
     function mostraResultado(){
         return function (){
-    $('#modal01').modal();
+    abrirJanelaModal();
    
     var $resultadoTmb = document.getElementById('resultadodotmb');
     var $resultadoGastoCalorico = document.getElementById('resultadogastocalorico');
     var resultadoCalculoTMB = calculoTMB($altura.value, $peso.value, $idade.value, $sexo.value);
     var resultadoGastoCalorico = calculoGastoCalorico(resultadoCalculoTMB);
     
-        $resultadoTmb.innerHTML = "Sua Taxa Metabólica Basal é: <br><strong>" + resultadoCalculoTMB + " Kcal</strong>";
-        $resultadoGastoCalorico.innerHTML = "Seu Gasto Calórico Diário é: <br><strong>" + resultadoGastoCalorico + " Kcal</strong>";
+        $resultadoTmb.innerHTML = "Sua Taxa Metabólica Basal é: <br><span>" + resultadoCalculoTMB + " Kcal</span>";
+        $resultadoGastoCalorico.innerHTML = "Seu Gasto Calórico Diário é: <br><span>" + resultadoGastoCalorico + " Kcal</span>";
             window.localStorage.setItem("gasto_calorico", resultadoGastoCalorico);
             window.localStorage.setItem("peso", $peso.value);
        

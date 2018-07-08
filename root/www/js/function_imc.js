@@ -27,23 +27,23 @@
             var resultado = document.getElementById('resultadodoimc');
             
             if (imc < 18.5) {
-                resultado.textContent = "Você está abaixo do peso com este indice: " + imc;
+                resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está <br><b>Abaixo do Peso</b>.";
             }
 
             if (imc >= 18.5 && imc < 24.9) {
 
-                resultado.textContent = "Você está normal com este indice: " + imc;
+                resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está <br><b>Normal</b>.";
 
             }
 
             if (imc >= 25 && imc < 29.9) {
-                resultado.textContent = "Você está com sobre peso com este indice: " + imc;
+                resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está com <br><b>Sobre Peso</b>.";
             }
             if (imc >= 30 && imc < 39.9) {
-                resultado.textContent = "Você está com obeisdade com este indice: " + imc;
+                resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está com <br><b>Obesidade</b>.";
             }
             if (imc > 40) {
-                resultado.textContent = "Você está com obesidade grave com este indice: " + imc;
+                resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está com <br><b>Obesidade Grave</b>.";
             }
 
         }
