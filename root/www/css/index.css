@@ -160,8 +160,8 @@ overflow: scroll;
 
 .btn-index{
   color: #FFF;
-  background-color: rgba(79,79,79,0.8);
-  border-color: rgba(79,79,79,0.8);
+  background-color: rgba(0,0,0,0.6);
+  border-color: #000;
   width: 175px;
   height: auto;
     font-size: 20px !important;
