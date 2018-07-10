@@ -1,60 +1,83 @@
 (function () {
-        'use strict';
+    'use strict';
 
+
+
+    var $altura = document.getElementById('alturaImc');
+    var $peso = document.getElementById('pesoImc');
+    var $form = document.getElementById('formImc');
+    
+    $form.addEventListener('input', function(){
+        
+        validaForm($altura, $peso);
+    })
+
+    $form.addEventListener('submit', function (e) {
+        
+        e.preventDefault();
+        callResultado();
+    })
+
+
+
+    function callResultado() {
+
+        abrirJanelaModal();
+
+
+        viewResultado(calculo($peso.value, $altura.value));
+
+    }
+
+    function viewResultado(imc) {
+        var resultado = document.getElementById('resultadodoimc');
+
+        if (imc < 18.5) {
+            resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está <br><b>Abaixo do Peso</b>.";
+        }
+
+        if (imc >= 18.5 && imc < 24.9) {
+
+            resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está <br><b>Normal</b>.";
+
+        }
+
+        if (imc >= 25 && imc < 29.9) {
+            resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está com <br><b>Sobre Peso</b>.";
+        }
+        if (imc >= 30 && imc < 39.9) {
+            resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está com <br><b>Obesidade</b>.";
+        }
+        if (imc > 40) {
+            resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está com <br><b>Obesidade Grave</b>.";
+        }
+
+    }
+
+    function calculo(peso, altura) {
+        var result = ((peso / altura) / altura) * 10000;
+        result = parseFloat(result).toFixed(2);
+        return result;
+
+    }
+
+    /*function validaForm(...inputs){
+        
+        
+        
+        for(var i = 0; i < inputs.length; i++){
+            inputs[i].addEventListener('input', function(){
+                
+                inputs[i].value = inputs[i].replace(/[a-z]|[\s]|[\.,\-%;&¨%$#@\!"]/gi, '');
+                
+            })
+        }
+        
        
+    }*/
     
-        var $altura = document.getElementById('alturaImc');
-        var $peso = document.getElementById('pesoImc');
-
-        var $btnCalcular = document.getElementById('calcular');
     
-        $btnCalcular.addEventListener('click', callResultado());
-
-               
-
-        function callResultado() {
-            return function () {
-               
-                abrirJanelaModal();
-                
-              
-                viewResultado(calculo($peso.value, $altura.value));
-                
-            }
-        }
-
-        function viewResultado(imc) {
-            var resultado = document.getElementById('resultadodoimc');
-            
-            if (imc < 18.5) {
-                resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está <br><b>Abaixo do Peso</b>.";
-            }
-
-            if (imc >= 18.5 && imc < 24.9) {
-
-                resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está <br><b>Normal</b>.";
-
-            }
-
-            if (imc >= 25 && imc < 29.9) {
-                resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está com <br><b>Sobre Peso</b>.";
-            }
-            if (imc >= 30 && imc < 39.9) {
-                resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está com <br><b>Obesidade</b>.";
-            }
-            if (imc > 40) {
-                resultado.innerHTML = "<span>" + imc + "</span><br><br>Você está com <br><b>Obesidade Grave</b>.";
-            }
-
-        }
     
-     function calculo(peso, altura) {
-            var result = ((peso / altura) / altura) * 10000;
-            result = parseFloat(result).toFixed(2);
-            return result;
-                
-        }
     
-
 
 })()

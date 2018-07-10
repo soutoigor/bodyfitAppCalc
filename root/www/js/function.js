@@ -7,9 +7,7 @@ function yesnoCheck(that) {
     }
 
 
-$('input').on("input", function(e) {
-    $(this).val($(this).val().replace(/,/g, ""));
-});
+
     
     
 function abrirJanelaModal(){
@@ -34,3 +32,22 @@ $(".ttp").tooltip();
   return null;
  }
 
+function validaForm(...inputs){
+        for(var i = 0; i < inputs.length; i++){
+            
+            if(inputs[i].value.length > 3){
+                limitaCampo(inputs[i]);
+            }
+        }
+    }
+    
+    function limitaCampo(campo){
+        
+       
+  var max_numeros = 3;
+        console.log('funfou');
+  if(campo.value.length > max_numeros) {
+    campo.value = campo.value.substr(0, max_numeros);
+      
+  }
+}
