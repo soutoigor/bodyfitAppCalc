@@ -31,23 +31,24 @@ $(".ttp").tooltip();
    
   return null;
  }
-
+/*
 function validaForm(...inputs){
         for(var i = 0; i < inputs.length; i++){
             
             if(inputs[i].value.length > 3){
                 limitaCampo(inputs[i]);
+                
             }
         }
     }
     
-    function limitaCampo(campo){
+    function limitaCampo(){
         
-       
-  var max_numeros = 3;
-        console.log('funfou');
-  if(campo.value.length > max_numeros) {
-    campo.value = campo.value.substr(0, max_numeros);
+    var max_numeros = 3;
+        
+  if(this.value.length > max_numeros) {
+    this.value = this.value.substr(0, max_numeros);
       
   }
-}
+}*/
+

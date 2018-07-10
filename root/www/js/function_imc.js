@@ -7,10 +7,32 @@
     var $peso = document.getElementById('pesoImc');
     var $form = document.getElementById('formImc');
     
-    $form.addEventListener('input', function(){
+    $altura.addEventListener('input', function limitaTotal(e){
+        var input = e.target;
+        var value = input.value;
+
+        if (value.length <= 3) {
+            return;
+        }
+
+        input.value = input.value.substr(0, 3); 
         
-        validaForm($altura, $peso);
-    })
+    });
+    
+    $peso.addEventListener('input', function limitaTotal(e){
+        var input = e.target;
+        var value = input.value;
+
+        if (value.length <= 3) {
+            return;
+        }
+
+        input.value = input.value.substr(0, 3); 
+        
+    });
+    
+    
+    
 
     $form.addEventListener('submit', function (e) {
         
@@ -76,8 +98,7 @@
        
     }*/
     
-    
-    
+   
     
 
 })()
