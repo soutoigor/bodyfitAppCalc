@@ -97,7 +97,7 @@ label {
     font-weight: bolder;
     margin-top: -15px;
     text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.8);
-    
+
 }
 
 .sub-title {
@@ -367,4 +367,23 @@ option {
         display: inline-block;
         width: auto;
     }
+}
+
+/* ----- DICAS ------*/
+.panel a{
+  text-decoration: none;
+}
+.panel-heading{
+  
+  background-color: #F0F;
+}
+.panel-heading h4{
+  color: #FFF;
+  font-weight: 500;
+}
+.panel-collapse{
+  background-color: #fff;
+}
+.panel-collapse .panel-body{
+  font-size: 16px;
 }
