@@ -2,25 +2,25 @@
     'use strict';
 
     var $altura = document.getElementById('altura');
-
     var $abdomen = document.getElementById('abdomen');
-
     var $pescoco = document.getElementById('pescoco');
-
     var $sexo = document.getElementById('sexo');
+    var $form = document.getElementById('formBF');
 
-    document.getElementById('calcular').addEventListener('click', viewBF());
 
+    $form.addEventListener('submit', function (e) {
+        
+        e.preventDefault();
+        viewBF();
+    })
 
 
     function viewBF() {
-        return function () {
             abrirJanelaModal();
             viewResultadoBF(calculoBF($sexo.value, parseFloat($altura.value), parseFloat($abdomen.value), parseFloat($pescoco.value)), $sexo.value);
-
-        }
     }
 
+    
     function calculoBF(sexo, altura, abdomen, pescoco){
 
         var resultado = 0;

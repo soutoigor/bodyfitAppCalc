@@ -63,21 +63,23 @@
                                 <!--INPUT DA ALTURA -->
                                 <div class="input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-resize-vertical" style='font-size: 15px;'></span></span>
-                                    <input type="text" class="form-control" placeholder="Altura" name="altura" id="altura">
+                                    
+                                <form action="#" id="formTMB">
+                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Altura" name="altura" id="altura" required>
                                 </div>
                                 <!-- -------------- -->
                                 <br>
                                 <!--INPUT DO PESO-->
                                 <div class="input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-scale" style='font-size: 15px;'></span></span>
-                                    <input type="text" class="form-control" placeholder="Peso" name="peso" id="peso">
+                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Peso" name="peso" id="peso" required>
                                 </div>
                                 <!-- ------- -->
                                 <br>
                                 <!--INPUT DA IDADE-->
                                 <div class="input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-calendar" style='font-size: 15px;'></span></span>
-                                    <input type="text" class="form-control" placeholder="Sua idade" name="idade" id="idade">
+                                    <input type="number" min="0" max="130" class="valida form-control" placeholder="Sua idade" name="idade" id="idade" required>
                                 </div>
                                 <!-- ------------ -->
                                 <br>
@@ -96,7 +98,7 @@
                                 <div class="input-group">
                                     <label>Nível de Atividade Diária</label>
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="atividade" id="atv1" value="atv1">
+                                        <input class="form-check-input" type="radio" name="atividade" id="atv1" value="atv1" required>
                                         <label class="form-check-label" for="atv1">Sedentário</label>
                                         <span  class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right"  title="Nenhum exercício diário e sentado na maior parte do dia."></span>
                                         
@@ -126,8 +128,9 @@
                                 <!-- ----------- -->
                                 <div class="row">
                                     <div style="padding-top: 15px;" class="buttons-forms">
-                                        <button type="button" name="calcular" id="calcular" class="btn btn-calcular">Calcular</button>
-
+                                        <button type="submit" name="calcular" id="calcular" class="btn btn-calcular">Calcular</button>
+                                        </form>
+                                    
                                         <a class="como-medir" href="#" onclick="$('#modal02').modal();">Como Medir</a>
                                     </div>
                                 </div>
@@ -222,5 +225,5 @@
 </body>
     <script src="js/function.js"></script>
     <script src="js/function_tmb.js"></script>
-
+    <script src="js/forms_validator.js"></script>
 </html>

@@ -3,26 +3,33 @@
 var $gasto = document.getElementById("gasto");
 var $peso = document.getElementById('peso');
 var $btnSetGasto = document.getElementById('btnSetGasto');
-var $btnResultado = document.getElementById('mostraResultado');
 var $btnLimpar = document.getElementById('limparTabela');
 var proteina = 0;
 var gordura = 0;
 var carbo = 0;
+ 
     
     $btnSetGasto.addEventListener('click', setStorageValues());
+ 
+     var $form = document.getElementById('formMacros');
     
-    $btnResultado.addEventListener('click', viewResultado());
+    $form.addEventListener('submit', function (e) {
+        
+        e.preventDefault();
+        viewResultado();
+    })
+    
+    
     
         
     
     function viewResultado(){
-        return function (){
 
             abrirJanelaModal();            
              criaTabelaMacros();
             
             
-        }
+        
     }
     
     

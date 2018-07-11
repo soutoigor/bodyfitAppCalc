@@ -63,7 +63,8 @@
                                <!--INPUT GASTO CALORICO-->
                                 <div class="input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-scale" style='font-size: 15px;'></span></span>
-                                    <input type="text" class="form-control" placeholder="Gasto Calórico" name="gasto" id="gasto">
+                                    <form action="#" id="formMacros">
+                                    <input type="number" min="0" max="6000" class="form-control" placeholder="Gasto Calórico" name="gasto" id="gasto" required>
                                 </div>
                                 <div class="row" style='margin-top: 10px;'>
                                     <button type="button" style='margin-right: 20px;' class="btn btn-sm btn-calcular col-xs-offset-1 col-sm-offset-1 col-xs-4 col-sm-4" id='btnSetGasto'>Já calculei</button>
@@ -74,7 +75,7 @@
                                  <!--INPUT DO PESO-->
                                 <div class="input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-scale" style='font-size: 15px;'></span></span>
-                                    <input type="text" class="form-control" placeholder="Peso" name="peso" id="peso">
+                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Peso" name="peso" id="peso" required>
                                 </div>
                                 <!-- ------- -->
                                 <!-- ------- -->
@@ -85,7 +86,7 @@
                                
                                     
                                     <div class="form-check">
-                                        <input class="form-check-input" type="radio" name="objetivo" id="perder" value="perder">
+                                        <input class="form-check-input" type="radio" name="objetivo" id="perder" value="perder" required>
                                         <label class="form-check-label" for="perder">Perder Peso</label>
                                     </div>
                                     
@@ -110,8 +111,8 @@
                                 <!-- ----------- -->
                                 <div class="row">
                                     <div style="padding-top: 15px;" class="buttons-forms">
-                                        <button type="button" name="mostraResultado" id="mostraResultado" class="btn btn-calcular">Calcular</button>
-
+                                        <button type="submit" name="mostraResultado" id="mostraResultado" class="btn btn-calcular">Calcular</button>
+                                        </form>
                                       <!--  <a class="como-medir" href="#" onclick="$('#modal02').modal();">Como Medir</a> -->
                                     </div>
                                 </div>
@@ -217,5 +218,5 @@
 </body>
     <script src="js/function.js"></script>
     <script src="js/function_macros.js"></script>
-
+    <script src="js/forms_validator.js"></script>
 </html>

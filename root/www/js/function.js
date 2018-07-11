@@ -1,8 +1,11 @@
-function yesnoCheck(that) {
+function trocaSexo(that) {
         if (that.value == "feminino") {
             document.getElementById("feminino").style.display = "block";
+            document.getElementById("quadril").setAttribute("required", "");
         } else {
             document.getElementById("feminino").style.display = "none";
+            document.getElementById("quadril").removeAttribute("required");
+
         }
     }
 
@@ -31,6 +34,9 @@ $(".ttp").tooltip();
    
   return null;
  }
+
+ 
+    
 /*
 function validaForm(...inputs){
         for(var i = 0; i < inputs.length; i++){

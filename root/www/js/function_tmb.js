@@ -4,15 +4,21 @@ var $altura = document.getElementById('altura');
 var $peso = document.getElementById('peso');
 var $idade = document.getElementById('idade');
 var $sexo = document.getElementById('sexo');
-var $btnCalc = document.getElementById('calcular');
+ var $form = document.getElementById('formTMB');
+    
+ 
+    
+    $form.addEventListener('submit', function (e) {
+        
+        e.preventDefault();
+        mostraResultado();
+    })
 
-
-$btnCalc.addEventListener('click', mostraResultado());
   
     
     function mostraResultado(){
-        return function (){
-    abrirJanelaModal();
+
+        abrirJanelaModal();
    
     var $resultadoTmb = document.getElementById('resultadodotmb');
     var $resultadoGastoCalorico = document.getElementById('resultadogastocalorico');
@@ -24,7 +30,7 @@ $btnCalc.addEventListener('click', mostraResultado());
             window.localStorage.setItem("gasto_calorico", resultadoGastoCalorico);
             window.localStorage.setItem("peso", $peso.value);
        
-        }
+        
             }
     
    function calculoTMB(altura, peso, idade, sexo){
