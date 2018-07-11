@@ -36,25 +36,4 @@ $(".ttp").tooltip();
  }
 
  
-    
-/*
-function validaForm(...inputs){
-        for(var i = 0; i < inputs.length; i++){
-            
-            if(inputs[i].value.length > 3){
-                limitaCampo(inputs[i]);
-                
-            }
-        }
-    }
-    
-    function limitaCampo(){
-        
-    var max_numeros = 3;
-        
-  if(this.value.length > max_numeros) {
-    this.value = this.value.substr(0, max_numeros);
-      
-  }
-}*/
-
+   

@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>BodyFit</title>
+    <title>TMB</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- CSS -->
@@ -42,6 +42,8 @@
                                 <li><a href="imc.html">IMC</a></li>
                                 <li class="active"><a href="tmb.html">Gasto Calórico Diário</a></li>
                                 <li><a href="macros.html">Monte sua Dieta</a></li>
+                                <li ><a href="dicas.html">Dicas</a></li>
+
                             </ul>
                         </div>
                     </div>
@@ -63,7 +65,7 @@
                                 <!--INPUT DA ALTURA -->
                                 <div class="input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-resize-vertical" style='font-size: 15px;'></span></span>
-                                    
+
                                 <form action="#" id="formTMB">
                                     <input type="number" min="0" max="250" class="valida form-control" placeholder="Altura" name="altura" id="altura" required>
                                 </div>
@@ -101,7 +103,7 @@
                                         <input class="form-check-input" type="radio" name="atividade" id="atv1" value="atv1" required>
                                         <label class="form-check-label" for="atv1">Sedentário</label>
                                         <span  class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right"  title="Nenhum exercício diário e sentado na maior parte do dia."></span>
-                                        
+
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="atividade" id="atv2" value="atv2">
@@ -130,7 +132,7 @@
                                     <div style="padding-top: 15px;" class="buttons-forms">
                                         <button type="submit" name="calcular" id="calcular" class="btn btn-calcular">Calcular</button>
                                         </form>
-                                    
+
                                         <a class="como-medir" href="#" onclick="$('#modal02').modal();">Como Medir</a>
                                     </div>
                                 </div>

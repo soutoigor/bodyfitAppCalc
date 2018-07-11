@@ -8,7 +8,8 @@ function limitaTotal(e){
             return;
         }
 
-        input.value = input.value.substr(0, 3); 
+        input.value = input.value.substr(0, 3);
+        
 }
     
     
