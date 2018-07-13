@@ -60,64 +60,65 @@
                                 <p class="sub-title">Consulte suas medidas:</p>
                                 <br>
                                 <div class="buttons-forms">
-                                    <button type="button" name="calcular" id="calcular" class="btn btn-calcular">Consultar</button>
-                                    
+                                    <button type="button" name="consultar" id="consultar" class="btn btn-calcular">Consultar</button>
+
                                 </div>
-                                <br>
-                                <p class="sub-title">Crie / Atualize suas medidas inserindo:</p>
+                                <br><br>
+                                <p class="titulo-jumbo">Crie / Atualize</p>
+                                <p class="sub-title">Preencha as medidas que deseja salvar:</p>
                                 <br>
                                 <div class="input-group">
                                     <!--NOME -->
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
                                 <form action="#" id="frmMedidas">
-                                        <input type="text" maxlength="20" class="form-control" placeholder="Nome " name="nome" id="alturaImc" >
+                                        <input type="text" maxlength="20" class="form-control" placeholder="Nome " name="nome" id="alturaImc" required>
                                         <!-- -------------- -->
                                 </div>
                                     <br>
                                 <div class="input-group">
                                     <!--INPUT DA ALTURA -->
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-resize-vertical"></span></span>
-                                        <input type="number" min="0" max="250" class="valida form-control" placeholder="Altura " name="altura" id="alturaImc" required>
+                                        <input type="number" min="0" max="250" class="valida form-control" placeholder="Altura " name="altura" id="alturaImc">
                                         <!-- -------------- -->
                                 </div>
                                 <br>
                                 <div class="input-group">
                                     <!--INPUT DO PESO-->
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-scale"></span></span>
-                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Peso" name="peso" id="pesoImc" required>
+                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Peso" name="peso" id="pesoImc">
                                     <!-- ------- -->
                                 </div>
                                 <br>
                                 <!-- ABDOMEN -->
                                 <div class="input-group">
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-resize-horizontal"></span></span>
-                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Abdômen" name="abdomen" id="abdomen" required>
+                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Abdômen" name="abdomen" id="abdomen">
                                 </div>
                                 <!-- QUADRIL -->
                                     <br>
                                 <div class="input-group">
                                         <span class="input-group-addon"><span class="glyphicon glyphicon-resize-horizontal"></span></span>
-                                        <input type="number" min="0" max="250" class="valida form-control" placeholder="Quadril" name="quadrilMedidas" id="quadrilMedidas">                                   
+                                        <input type="number" min="0" max="250" class="valida form-control" placeholder="Quadril" name="quadrilMedidas" id="quadrilMedidas">
                                 </div>
                                     <br>
                                     <div class="input-group">
                                     <!--INPUT DO braços-->
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-scale"></span></span>
-                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Braços" name="braco" id="braco" required>
+                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Braços" name="braco" id="braco">
                                     <!-- ------- -->
                                 </div>
                                 <br>
                                     <div class="input-group">
                                     <!--INPUT DO coxa-->
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-scale"></span></span>
-                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Coxas" name="coxa" id="coxa" required>
+                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Coxas" name="coxa" id="coxa">
                                     <!-- ------- -->
                                 </div>
                                 <br>
                                     <div class="input-group">
                                     <!--INPUT DO panturrilha-->
                                     <span class="input-group-addon"><span class="glyphicon glyphicon-scale"></span></span>
-                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Panturrilha" name="panturrilha" id="panturrilha" required>
+                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Panturrilha" name="panturrilha" id="panturrilha">
                                     <!-- ------- -->
                                 </div>
                                 <br>
@@ -139,17 +140,19 @@
                                                 <span class="sr-only">Fechar janela modal</span>
                                             </button>
 
-                                                <h4 class="modal-title"><strong>Resultado IMC</strong></h4>
+                                                <h4 class="modal-title"><strong>Suas Medidas</strong></h4>
 
                                             </div>
                                             <div class="modal-body">
-                                                <!-- RESULTADO DO IMC -->
-                                                <p name="resultadodoimc" id="resultadodoimc"></p>
+                                                <!-- MEDIDAS -->
+                                                <table id="tblListar">
+                                                  
+                                                </table>
                                                 <!-- ---------------- -->
                                             </div>
                                             <div class="modal-footer">
                                                 <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-                                                <a href="javascript:history.go();" class="btn btn-info">Novo cálculo</a>
+                                                <a href="#" class="btn btn-info">Novo cálculo</a>
                                             </div>
                                         </div>
                                     </div>
