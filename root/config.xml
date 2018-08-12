@@ -19,7 +19,6 @@
   <author href="https://www.linkedin.com/in/igor-souto/" email="igor_souto@outlook.com">
 Igor Souto  </author>
 
-    <gap:plugin name="org.apache.cordova.device" />
     <gap:plugin name="org.apache.cordova.splashscreen" />
 
    <preference name="SplashScreen" value="splash" />
