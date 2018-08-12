@@ -9,8 +9,11 @@
 	
 	
 
-	<icon src="img/icon2.png" />
-  <name>BodyFit</name>
+	<icon src="img/icon.png" />
+    <plugin name="cordova-plugin-splashscreen" />
+    <splash src="img/splash.png" />
+
+  <name>Easy Body Calc</name>
 
   <description>
       A calculator for your body.
