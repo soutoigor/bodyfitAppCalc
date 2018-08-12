@@ -20,11 +20,9 @@
 Igor Souto  </author>
 
 
-   <preference name="SplashScreen" value="splash" />
 
     
-	<icon src="icon/icon.png" />
-	<gap:splash src="splash/splash.png" />
+	<icon src="img/icon.png" />
 
 <platform name="android">
 	<icon qualifier="ldpi" src="res/icons/android/drawable-ldpi-icon.png" />
