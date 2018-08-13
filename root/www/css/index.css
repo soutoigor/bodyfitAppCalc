@@ -35,7 +35,7 @@ td {
 .page-title {
     color: #FFF !important;
     font-family: Helvetica;
-    font-size: 26px;
+    font-size: 22px;
     font-style: normal;
     font-variant: normal;
     font-weight: bold;
@@ -75,10 +75,10 @@ label {
 
 
 .index-jumbo {
-    width: 70%;
+    width: 80%;
     height: auto;
     display: block;
-    margin: 50% auto;
+    margin: 35% auto;
     border-width: 0px;
     text-align: center;
     border-radius: 0px;
@@ -163,6 +163,7 @@ label {
 .index-title {
     color: white;
     opacity: 1 !important;
+    font-size: 26px !important;
 
 }
 
@@ -274,6 +275,13 @@ btn-sm:active {
     flex: 1;
     position: relative;
     top: 20px;
+    border: 0.5px solid #000;
+    padding: 7px;
+    border-radius: 10px;
+    width:70%;
+    text-align: center;
+    margin-bottom: 15px;
+    background-color: rgba(255,255,255,0.1);
 }
 
 .como-medir:hover,
@@ -375,11 +383,11 @@ option {
 }
 .panel-heading{
   
-  background-color: #F0F;
+  background-color: #60F;
 }
 .panel-heading h4{
   color: #FFF;
-  font-weight: 500;
+  font-weight: 600;
 }
 .panel-collapse{
   background-color: #fff;

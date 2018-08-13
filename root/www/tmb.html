@@ -38,11 +38,21 @@
                         <div class="collapse navbar-collapse" id="elementoCollapse1">
 
                             <ul class="nav navbar-nav navbar-right ">
-                                <li><a href="bodyfat.html">Gordura Corporal</a></li>
-                                <li><a href="imc.html">IMC</a></li>
-                                <li class="active"><a href="tmb.html">Gasto Calórico Diário</a></li>
-                                <li><a href="macros.html">Monte sua Dieta</a></li>
-                                <li ><a href="dicas.html">Dicas</a></li>
+                                <li>
+                                    <a href="bodyfat.html">Gordura Corporal</a>
+                                </li>
+                                <li>
+                                    <a href="imc.html">IMC</a>
+                                </li>
+                                <li class="active">
+                                    <a href="tmb.html">Gasto Calórico Diário</a>
+                                </li>
+                                <li>
+                                    <a href="macros.html">Monte sua Dieta</a>
+                                </li>
+                                <li>
+                                    <a href="dicas.html">Mitos e Dicas</a>
+                                </li>
 
                             </ul>
                         </div>
@@ -64,24 +74,30 @@
 
                                 <!--INPUT DA ALTURA -->
                                 <div class="input-group">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-resize-vertical" style='font-size: 15px;'></span></span>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-resize-vertical" style='font-size: 15px;'></span>
+                                    </span>
 
-                                <form action="#" id="formTMB">
-                                    <input type="number"  min="0" max="250" class="valida form-control" placeholder="Altura" name="altura" id="altura" required>
+                                    <form action="#" id="formTMB">
+                                        <input type="number" min="0" max="250" class="valida form-control" placeholder="Altura" name="altura" id="altura" required>
                                 </div>
                                 <!-- -------------- -->
                                 <br>
                                 <!--INPUT DO PESO-->
                                 <div class="input-group">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-scale" style='font-size: 15px;'></span></span>
-                                    <input type="number"  min="0" max="250" class="valida form-control" placeholder="Peso" name="peso" id="peso" required>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-scale" style='font-size: 15px;'></span>
+                                    </span>
+                                    <input type="number" min="0" max="250" class="valida form-control" placeholder="Peso" name="peso" id="peso" required>
                                 </div>
                                 <!-- ------- -->
                                 <br>
                                 <!--INPUT DA IDADE-->
                                 <div class="input-group">
-                                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar" style='font-size: 15px;'></span></span>
-                                    <input type="number"  min="0" max="130" class="valida form-control" placeholder="Sua idade" name="idade" id="idade" required>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar" style='font-size: 15px;'></span>
+                                    </span>
+                                    <input type="number" min="0" max="130" class="valida form-control" placeholder="Sua idade" name="idade" id="idade" required>
                                 </div>
                                 <!-- ------------ -->
                                 <br>
@@ -102,28 +118,28 @@
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="atividade" id="atv1" value="atv1" required>
                                         <label class="form-check-label" for="atv1">Sedentário</label>
-                                        <span  class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right"  title="Nenhum exercício diário e sentado na maior parte do dia."></span>
+                                        <span class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right" title="Nenhum exercício diário e sentado na maior parte do dia."></span>
 
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="atividade" id="atv2" value="atv2">
                                         <label class="form-check-label" for="atv2">Levemente Ativo</label>
-                                        <span  class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right"  title="Exercício leve 1 à 3 dias/semana e sentado maior parte do dia."></span>
+                                        <span class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right" title="Exercício leve 1 à 3 dias/semana e sentado maior parte do dia."></span>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="atividade" id="atv3" value="atv3">
                                         <label class="form-check-label" for="atv3">Moderadamente Ativo</label>
-                                        <span  class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right"  title="Exercício moderado/forte 3 a 5 dias/semana e sentado na maior parte do dia."></span>
+                                        <span class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right" title="Exercício moderado/forte 3 a 5 dias/semana e sentado na maior parte do dia."></span>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="atividade" id="atv4" value="atv4">
                                         <label class="form-check-label" for="atv4">Muito Ativo</label>
-                                         <span  class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right"  title="Exercício moderado/forte 3 a 5 dias/semana e em pé na maior parte do dia."></span>
+                                        <span class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right" title="Exercício moderado/forte 3 a 5 dias/semana e em pé na maior parte do dia."></span>
                                     </div>
                                     <div class="form-check">
                                         <input class="form-check-input" type="radio" name="atividade" id="atv5" value="atv5">
                                         <label class="form-check-label" for="atv5">Extra Ativo</label>
-                                        <span  class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right"  title="Exercício intenso 5 a 7 dias/semana e em pé na maior parte do dia."></span>
+                                        <span class="glyphicon glyphicon-question-sign ttp" data-toggle="tooltip" data-placement="right" title="Exercício intenso 5 a 7 dias/semana e em pé na maior parte do dia."></span>
                                     </div>
 
                                 </div>
@@ -132,7 +148,7 @@
                                     <div style="padding-top: 15px;" class="buttons-forms">
                                         <button type="submit" name="calcular" id="calcular" class="btn btn-calcular">Calcular</button>
                                         </form>
-
+                                        <a class="como-medir" href="#" onclick="$('#modal04').modal();">Pra que serve?</a>
                                         <a class="como-medir" href="#" onclick="$('#modal02').modal();">Como Medir</a>
                                     </div>
                                 </div>
@@ -143,17 +159,19 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal">
-                                                <span aria-hidden="true">&times;</span>
-                                                <span class="sr-only">Fechar janela modal</span>
-                                            </button>
+                                                    <span aria-hidden="true">&times;</span>
+                                                    <span class="sr-only">Fechar janela modal</span>
+                                                </button>
 
-                                                <h4 class="modal-title"><strong>Resultado TMB</strong></h4>
+                                                <h4 class="modal-title">
+                                                    <strong>Resultado TMB</strong>
+                                                </h4>
 
                                             </div>
                                             <div class="modal-body">
                                                 <!-- RESULTADO DO TMB -->
-                                                <p name="resultadodotmb"  id="resultadodotmb"></p>
-                                                <p name="resultadogastocalorico"  id="resultadogastocalorico"></p>
+                                                <p name="resultadodotmb" id="resultadodotmb"></p>
+                                                <p name="resultadogastocalorico" id="resultadogastocalorico"></p>
                                                 <!-- ---------------- -->
                                             </div>
                                             <div class="modal-footer">
@@ -172,9 +190,9 @@
                                         <div class="modal-content">
                                             <div class="modal-header">
                                                 <button type="button" class="close" data-dismiss="modal">
-                                                <span aria-hidden="true">&times;</span>
-                                                <span class="sr-only">Fechar janela modal</span>
-                                            </button>
+                                                    <span aria-hidden="true">&times;</span>
+                                                    <span class="sr-only">Fechar janela modal</span>
+                                                </button>
                                                 <h4 class="modal-title">
                                                     <Strong>Como Medir</Strong>
                                                 </h4>
@@ -186,8 +204,12 @@
 
                                                 <ul class="nav nav-como-medir-imc nav-tabs nav-pills pills-dark">
 
-                                                    <li class="active"><a href="#mede-altura" data-toggle="tab">Altura</a></li>
-                                                    <li class=""><a href="#mede-peso" data-toggle="tab">Peso</a></li>
+                                                    <li class="active">
+                                                        <a href="#mede-altura" data-toggle="tab">Altura</a>
+                                                    </li>
+                                                    <li class="">
+                                                        <a href="#mede-peso" data-toggle="tab">Peso</a>
+                                                    </li>
 
                                                 </ul>
 
@@ -195,12 +217,16 @@
 
                                                     <div class="tab-pane active" id="mede-altura">
                                                         <h4>Altura</h4>
-                                                        <p>Fique em pé com os pés juntos e olhando para frente, com uma fita métrica ou régua, meça sua altura em centimetros, e coloque o resultado no campo "altura".</p>
+                                                        <p>Fique em pé com os pés juntos e olhando para frente, com uma fita
+                                                            métrica ou régua, meça sua altura em centimetros, e coloque o
+                                                            resultado no campo "altura".</p>
                                                         <img src="img/altura.jpg" alt="Criança encostada na parede e mãe medindo altura dela." />
                                                     </div>
                                                     <div class="tab-pane" id="mede-peso">
                                                         <h4>Peso</h4>
-                                                        <p>Use uma balança para se pesar e coloque seu peso em kg no campo solicitado. É importante que seja feito logo ao acordar, ainda em jejum e após usar o banheiro.</p>
+                                                        <p>Use uma balança para se pesar e coloque seu peso em kg no campo solicitado.
+                                                            É importante que seja feito logo ao acordar, ainda em jejum e
+                                                            após usar o banheiro.</p>
                                                         <img src="img/peso.jpg" alt="Mulher em cima de uma balança." />
 
                                                     </div>
@@ -215,17 +241,63 @@
 
                                 <!-- Fim da janela modal Como Medir -->
 
+                                <!-- Começo da janela O que é -->
+
+                                <div class="modal fade" id="modal04" role="dialog" tabindex="-1" aria-hidden="true">
+                                    <div class="modal-dialog modal-md">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal">
+                                                    <span aria-hidden="true">&times;</span>
+                                                    <span class="sr-only">Fechar janela modal</span>
+                                                </button>
+                                                <h4 class="modal-title">
+                                                    <Strong>Gasto Calórico Diário</Strong>
+                                                </h4>
+
+                                            </div>
+
+
+                                            <div class="modal-body">
+
+                                                <p>O
+                                                    <strong>gasto calórico diário</strong> é a soma da sua
+                                                    <strong>taxa metabolica basal</strong> (quantidade de calorias que você gasta
+                                                    mesmo estando em repouso) mais a quantidade de calorias que você gasta
+                                                    nas suas atividades diárias. </p>
+                                                <p>O valor do gasto calórico diário é o tanto que o seu corpo consome de calorias
+                                                    no dia inteiro, logo, sabendo disso, se consumirmos
+                                                    <strong>mais</strong> calorias do que esse resultado por dia, você acaba ganhando
+                                                    <strong>mais peso</strong>, consumindo
+                                                    <strong>menos </strong>que isso você
+                                                    <strong>perde</strong> peso.</p>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
                             </div>
                         </div>
                     </div>
+
+                    <!-- fim da janela O que é -->
+
                 </div>
             </div>
         </div>
     </div>
+    </div>
+    </div>
+    </div>
 
 
 </body>
-    <script src="js/function.js"></script>
-    <script src="js/function_tmb.js"></script>
-    <script src="js/forms_validator.js"></script>
+<script src="js/function.js"></script>
+<script src="js/function_tmb.js"></script>
+<script src="js/forms_validator.js"></script>
+
 </html>

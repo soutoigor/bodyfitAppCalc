@@ -42,7 +42,7 @@
                                 <li><a href="imc.html">IMC</a></li>
                                 <li ><a href="tmb.html">Gasto Calórico Diário</a></li>
                                 <li class="active"><a href="macros.html">Monte sua Dieta</a></li>
-                                <li ><a href="dicas.html">Dicas</a></li>
+                                <li ><a href="dicas.html">Mitos e Dicas</a></li>
 
                             </ul>
                         </div>
@@ -115,7 +115,8 @@
                                     <div style="padding-top: 15px;" class="buttons-forms">
                                         <button type="submit" name="mostraResultado" id="mostraResultado" class="btn btn-calcular">Calcular</button>
                                         </form>
-                                      <!--  <a class="como-medir" href="#" onclick="$('#modal02').modal();">Como Medir</a> -->
+                                        <a class="como-medir" href="#" onclick="$('#modal04').modal();">O que é?</a>
+                                        <a class="como-medir" href="#" onclick="$('#modal05').modal();">Comece agora<br>Dieta Flexível</a>
                                     </div>
                                 </div>
 
@@ -160,54 +161,136 @@
                                 </div>
                                 <!-- fim janela modal Macronutrientes -->
 
-                                <!-- Começo janela modal Como Medir -->
+                                   <!-- Começo da janela O que é -->
 
-                             <!--   <div class="modal fade" id="modal02" role="dialog" tabindex="-1" aria-hidden="true">
-                                    <div class="modal-dialog modal-md">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">
-                                                <span aria-hidden="true">&times;</span>
-                                                <span class="sr-only">Fechar janela modal</span>
-                                            </button>
-                                                <h4 class="modal-title">
-                                                    <Strong>Como Medir</Strong>
-                                                </h4>
+                                   <div class="modal fade" id="modal04" role="dialog" tabindex="-1" aria-hidden="true">
+                                        <div class="modal-dialog modal-md">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">
+                                                        <span aria-hidden="true">&times;</span>
+                                                        <span class="sr-only">Fechar janela modal</span>
+                                                    </button>
+                                                    <h4 class="modal-title">
+                                                        <Strong>Macronutrientes</Strong>
+                                                    </h4>
+
+                                                </div>
 
 
+                                                <div class="modal-body">
 
-                                            </div>
-                                            <div class="modal-body">
-
-                                                <ul class="nav nav-como-medir-imc nav-tabs nav-pills pills-dark">
-
-                                                    <li class="active"><a href="#mede-altura" data-toggle="tab">Altura</a></li>
-                                                    <li class=""><a href="#mede-peso" data-toggle="tab">Peso</a></li>
-
-                                                </ul>
-
-                                                <div style='margin-top: 20px;' class="tab-content">
-
-                                                    <div class="tab-pane active" id="mede-altura">
-                                                        <h4>Altura</h4>
-                                                        <p>Fique em pé com os pés juntos e olhando para frente, com uma fita métrica ou régua, meça sua altura em centimetros, e coloque o resultado no campo "altura".</p>
-                                                        <img src="img/altura.jpg" alt="Criança encostada na parede e mãe medindo altura dela." />
-                                                    </div>
-                                                    <div class="tab-pane" id="mede-peso">
-                                                        <h4>Peso</h4>
-                                                        <p>Use uma balança para se pesar e coloque seu peso em kg no campo solicitado. É importante que seja feito logo ao acordar, ainda em jejum e após usar o banheiro.</p>
-                                                        <img src="img/peso.jpg" alt="Mulher em cima de uma balança." />
-
-                                                    </div>
+                                                        <p>
+                                                        Há 3 macronutrientes presentes em nossos alimentos, são eles o Carboidrato, a Gordura e a Proteína. Cada um possui seus objetivos para serem consumidos e suas características.
+                                                        </p>
+                                                        <h4 class="modal-title">Proteína</h4>
+                                                        
+                                                        <p>
+                                                        Cada grama de proteína possui 4 calorias. A função da proteína é criar e regenerar os tecidos do nosso corpo, como pele, unha, cabelo, órgãos e músculos.
+                                                        Assim como o carboidrato, ela muda o tempo de absorção dependendo da sua origem (exemplo de lenta absorção: ovos, caseína. Exemplo de rápida: whey, carne.
+                                                        O ideal é ingerir proteínas de lenta absorção antes de um longo período sem se alimentar. Mas isso não causará grandes diferenças, se preocupe mais com o valor biológico dessa proteína, proteínas de fontes animais como ovos e carne possuem um valor biológico melhor do q de fontes integrais. Quanto melhor o valor biológico, melhor seus músculos irão absorver. 
+                                                        </p>
+                                                        
+                                                        <h4 class="modal-title">Gordura</h4>
+                                                        
+                                                        <p>
+                                                        Cada grama de gordura possui 9 calorias. 
+                                                        A função da gordura é fornecer energia para o corpo, sintetizar hormônios, são o veículo para as vitaminas lipossolúveis, compor as estruturas celulares e aumentam a palatibilidade dos alimentos.
+                                                        Suas fontes podem ser tanto animal quanto vegetal.
+                                                        As principais fontes de gordura são: queijos, carnes, leite, azeitonas, chocolates, manteiga, ovos, etc.
+                                                        </p>
+                                                        
+                                                        <h4 class="modal-title">Carboidrato</h4>
+                                                        
+                                                        <p>
+                                                         O carboidrato possui 4 calorias por grama. Sua função é fornecer energia e glicogênio para os músculos, cérebro, medula óssea e diversas funções do sistema nervoso.
+                                                        Dependendo da fonte de carboidrato, isso altera o seu índice glicêmico, que é a velocidade que ele é processado e quantidade de pico de insulina que ele produz.
+                                                        O carboidrato quando é rapidamente processado e não é usado como fonte de energia, se converte em tecido adiposo (suas gordurinhas), por isso, evite alimentos com alto índice glicêmico como: doces, refrigerantes, alimentos feitos com farinha como Paes e macarrão.
+                                                        Use de forma sabia, coloque este tipo de alimento para um pós treino, ou ao acordar, que é quando seu corpo realmente precisa se usar.
+                                                        </p>
 
                                                 </div>
 
                                             </div>
-
                                         </div>
                                     </div>
-                                </div> -->
-                                <!-- Fim da janela modal Como Medir -->
+
+
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- fim da janela O que é -->
+
+                         <!-- Começo da janela Como FAzer -->
+
+                         <div class="modal fade" id="modal05" role="dialog" tabindex="-1" aria-hidden="true">
+                                <div class="modal-dialog modal-md">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal">
+                                                <span aria-hidden="true">&times;</span>
+                                                <span class="sr-only">Fechar janela modal</span>
+                                            </button>
+                                            <h4 class="modal-title">
+                                                <Strong>Dieta Flexível</Strong>
+                                            </h4>
+
+                                        </div>
+
+
+                                        <div class="modal-body">
+
+                                                <p>A dieta flexível é um protocolo de dieta que você come o que quiser.</p>
+                                                <p>
+                                                Lembra que apenas precisamos estar em <strong>saldo calórico positivo ou negativo</strong> para ter resultados? Então, com ela você terá apenas que bater seus <strong>macronutrientes </strong>do dia (aqueles dados na página "monte sua dieta") e assim atingir sua <strong>meta de calorias diária</strong>.
+                                                </p>
+                                                <p>
+                                                Depois da primeira semana verifique se você <strong>perdeu/ ganhou peso</strong> (de acordo com seu objetivo).
+                                                </p>
+                                                <p>
+                                                Verifique toda semana, quando você <strong>parar de ter resultados</strong>, aumente/abaixe seu carboidrato diário em 1.10 vezes do que está no momento.
+                                                Enquanto estiver tendo resultados <strong>não precisa mexer</strong>, não tenha pressa, se tirar muitas calorias de uma vez, futuramente você não terá de onde tirar calorias quando <strong>seu corpo estagnar</strong>.
+                                                </p>
+                                                <p>
+                                                Mas calma. Você não vai <strong>se encher de chocolate</strong> o dia todo e emagrecer, afinal você vai ver que comidas que são besteira possuem uma quantidade de calorias enorme, então se comer muito, vai acabar <strong>passando fome</strong> depois por não sobrar espaço nas calorias diárias. Também irão te atrasar nos resultados, te deixando com retenção hídrica. Não impede seus resultados, mas atrasa.
+                                                </p>
+                                                <p>
+                                                A dieta flexível pode não ser a "mais regrada", porém é o modo mais simples e que você consegue levar pra vida toda.
+                                                </p>
+                                                <p>
+                                                Vale mais uma vida toda usando a "segunda melhor dieta do mundo" ou 2 semanas sofrendo, não aguentar mais  e ter um rebote da "melhor dieta do mundo" ?
+                                                <strong>O segredo para se ter resultados verdadeiros é a constância, e nisso a dieta flexível vai te ajudar muito!</strong>
+                                                </p>
+                                                <p>
+                                                Você pode controlar os seus macros diários usando aplicativos como <Strong>"MyFitnessPal", e "Fat Secret"</Strong>", são práticos de usar e ajudará a <strong>controlar seus macros</strong>.
+                                                Todos funcionam da mesma maneira, você cadastra seus macronutrientes nele e sempre que fizer uma refeição, pese os alimentos e informe nele.
+                                                </p>
+                                                <p>
+                                                Em caso de dúvida, deixarei dois vídeos explicativos.
+                                                </p>
+                                                <ul>
+                                                    <li><a style='color: purple;' target="_blank" href="https://www.youtube.com/watch?v=Zwu2bcwxoVs"><strong>Vídeo sobre dieta flexível</strong></a></li>
+                                                    <li><a style='color: purple;' target="_blank" href="https://www.youtube.com/watch?v=oYPrtEBQBKE"><strong>Vídeo sobre MyFitnessPal</strong></a></li>
+                                                </ul>
+
+                                                <p>Para aprender mais, recomendo canais como <a style='color: purple;' target="_blank" href="https://www.youtube.com/channel/UCepEtTIMTtU-MbFHz-pOZMw"><strong>Caio Bottura</strong></a>, <a style='color: purple;' target="_blank" href="https://www.youtube.com/channel/UCLfCo17TCjx7qf-JMhQioLQ"><strong>Gorgonoid</strong></a>, <a target="_blank" style='color: purple;'href="https://www.youtube.com/user/lAphexTwinl"><strong>Leandro Twin</strong></a> e <a style='color: purple;' target="_blank" href="https://www.youtube.com/channel/UC9pYZPwG0GjA43Q4ayVDZ7w"><strong>Fitness Flexível</strong></a>.</p>
+                                                <p>São pessoas que você pode confiar 100%, que são praticantes da dieta flexível e só passam informações com base em estudos, nada de marketing.</p>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- fim da janela Como FAzer -->
+
                             </div>
                         </div>
                     </div>
