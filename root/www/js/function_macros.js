@@ -45,11 +45,11 @@ var carbo = 0;
     function calculoCalorias(gasto){
         var objetivo = getRadioValor('objetivo');
         
-        if(objetivo === "perder")  return parseInt(gasto - 300);
+        if(objetivo === "perder")  return parseInt(gasto -(( gasto * 10 ) / 100 ));
     
         if(objetivo === "manter")  return parseInt(gasto);
         
-        if(objetivo === "ganhar")  return parseInt(gasto + 300);
+        if(objetivo === "ganhar")  return parseInt(gasto + (( gasto * 10 ) / 100 ) );
     }
     
     function criaTabelaMacros(){
