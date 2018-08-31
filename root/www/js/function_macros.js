@@ -105,13 +105,16 @@ var carbo = 0;
     
     function calculoMacros(calorias, peso){
 
-        proteina =  peso * 2.2;
-        var caloriaSoma = proteina * 4; 
-        gordura  =  peso * 0.9; 
-        caloriaSoma = caloriaSoma + (gordura * 9);
-        carbo = (calorias - caloriaSoma) / 4 ;
-        
-        return calorias;
+        proteina =  peso * 2.4 ;
+        console.log(proteina);
+       
+        gordura  =  ((calorias * 25) / 100) / 9; 
+      
+        carbo = ((calorias * 50) / 100) / 4;  
+      
+        var macros = [calorias, proteina, gordura, carbo];
+
+        return macros;
     }  
     
     
