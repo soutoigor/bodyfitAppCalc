@@ -21,7 +21,7 @@ algumas dicas e quebrar alguns mitos famosos nessa área.
 Acesse o seguinte link e faça o download para o seu **Android** ou **Windows Phone**  
 https://build.phonegap.com/apps/2834415/share  
   
-Você pode também rodar baixando/clonando o repositório
+Você pode também rodar baixando/clonando o repositório e rodando o arquivo index.html.
 
 ## Autor
 [Igor Souto de Souza](https://www.linkedin.com/in/igor-souto/)
